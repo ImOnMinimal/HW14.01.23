@@ -1,25 +1,35 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './Header';
+import Nav from './Nav';
+import Content from './Content'
+import RightMenu from './RightMenu';
+import Footer from './Footer';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header/>
+      <div className="displayFlex">
+        <Nav/>
+        <Content/>
+        <RightMenu/>
+      </div>
+      <Footer/>
+      
+    </>
   );
 }
+
+// function App() {
+//   const arr = [1, 2, 3, 4, 5, 6];
+
+//   const res = arr.map(function(item) {
+//    return <p>{item}</p>;
+//   });
+
+//   return <div>
+//    {res}
+//   </div>;
+//  }
 
 export default App;
