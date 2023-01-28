@@ -15,7 +15,6 @@ function App() {
   const [input3, setInput3] = useState(0)
   const [input4, setInput4] = useState(0)
   const [input5, setInput5] = useState(0)
-  let sum = input1+input2+input3+input4+input5
   return (
   // <div>
   //   <span>F° = </span>
@@ -30,7 +29,7 @@ function App() {
     <input value={input3} onInput={(event) => setInput3(event.target.value)}/><br/>
     <input value={input4} onInput={(event) => setInput4(event.target.value)}/><br/>
     <input value={input5} onInput={(event) => setInput5(event.target.value)}/><br/>
-    <p>{(Number(input1)+Number(input2)+Number(input3)+Number(input4)+Number(input5))/5}</p>
+    <span>{(Number(input1)+Number(input2)+Number(input3)+Number(input4)+Number(input5))/5}</span>
   </div>
   );
 }
