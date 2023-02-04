@@ -8,29 +8,21 @@ import Lesson from './Lesson.js';
 // import Footer from './Footer';
 
 function App() {
+  // const [on, setOn] = useState(false); 
 
-    const [isActive, setIsActive] = useState(false);
+
+  const [isActive, setIsActive] = useState(false);
+  return(
+  <div>
+    {/* <input type="button" checked={on} onClick={() => setOn(!on)} ></input>
+    <p>{ on ? 'Включено' : 'Выключено'}</p>  */}
 
 
-   return(
-    <div>
     <div style={{backgroundColor: isActive ? 'white' : '', color: isActive ? 'black' : ''}} class="widthMax height1200"onClick={() => setIsActive(!isActive)}>
       May your OWOS be many<br/>
       And your days MEW
     </div>
   </div>
-   )
+  )
 }
-// function App() {
-//   const arr = [1, 2, 3, 4, 5, 6];
-
-//   const res = arr.map(function(item) {
-//    return <p>{item}</p>;
-//   });
-
-//   return <div>
-//    {res}
-//   </div>;
-//  }
-
 export default App;
