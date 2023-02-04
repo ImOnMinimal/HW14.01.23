@@ -11,6 +11,9 @@
   color:white;
   box-shadow: 0px -7px 10px black;
 }
+.height1200{
+  height: 1200px;
+}
 .headerHeight{
   height: 50px;
   margin: 0px;
