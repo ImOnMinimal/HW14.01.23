@@ -1,0 +1,66 @@
+.topLine{
+    height: 44px;
+width: 100%;
+left: 0px;
+top: 0px;
+border-radius: 0px;
+background: #000000;
+}
+.topLineOneImage{
+    height: 17px;
+    width: 16px;
+    left: 0px;
+    top: 0px;
+    border-radius: 0px;
+    margin-right: 15px;
+}
+.topLineTwoImage{
+    height: 14px;
+    width: 14px;
+    left: 0px;
+    top: 0px;
+    border-radius: 0px;
+    margin-right: 15px;
+}
+.number{
+    height: 16px;
+    width: 355px;
+    left: 436px;
+    top: 14px;
+    border-radius: nullpx;
+}
+.exit{
+    height: 16px;
+    width: 107px;
+    left: 1408px;
+    top: 14px;
+    border-radius: nullpx;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+    width: 1110px;
+    margin: auto;
+}
+.defaultFlex, p{
+    display: flex;
+    align-items: center;
+    line-height: 44px;
+    color: #969696;
+}
+
+
+
+
+
+
+
+.header{
+    height: 80px;
+width: 1920px;
+left: 0px;
+top: 44px;
+border-radius: 0px;
+background: #0F0F0F;
+
+}
