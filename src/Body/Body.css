@@ -1,3 +1,18 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .bodyIntro{
     width: 100%;
     height: 934px;
@@ -24,8 +39,8 @@
 
 
 .squareText1{
-    font-family: Post No Bills Jaffna;
-    font-size: 64px;
+    font-family: Bebas Neue;
+    font-size: 80px;
     font-weight: 700;
     line-height: 80px;
     margin-top: 90px;
@@ -67,6 +82,12 @@
 .width50{
     width:50%;
 }
+.width880{
+    width: 880px;
+}
+.width1140{
+    width: 1140px;
+}
 
 
 
@@ -84,13 +105,12 @@
     width: 260px;
     border-radius: 0px;
     background: #191B1C;
+    padding: 10px;
 }
 .goodImg{
-    height: 214px;
-    width: 215px;
+    width: 100%;
     border-radius: 0px;
-    margin: auto;
-    margin-top: 30px;
+    margin-top: 10px;
     
 }
 .goodText1{
@@ -119,17 +139,26 @@
     color:#D0D0D0;
 }
 .goodTextBlock{
-    margin: auto;
     margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    color:#D0D0D0;
+
 }
 .flex1{
     display: flex;
     flex-wrap: wrap;
+    
 }
-.marginAuto{
-    margin: auto;
+.calculate{
+    font-family: Playfair Display;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: left;
+    height: 21px;
+    border-radius: nullpx;
+    color:#D0D0D0;
 }
-
 
 
 
@@ -165,7 +194,7 @@
     
     margin:auto;
     margin-top: 80px;
-    margin-bottom: 80px;
+    margin-bottom: 60px;
     border-bottom: solid 1px #FFFFFF;
     padding-bottom: 80px;
 }
@@ -185,10 +214,99 @@
     text-align: center;
     height: 39px;
     width: 376px;
-    padding-bottom: 70px;
+    padding-bottom: 80px;
     border-radius: nullpx;
     border-bottom: solid 1px #FFFFFF;
     margin:auto;
-    margin-top: 80px;
+    margin-top: 480px;
     color: #FFFFFF;
+}
+.buttonCollection{
+    background-color:transparent;
+    border: solid 2px #FFFFFF;
+    color: #FFFFFF;
+    font-family: PT Sans;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    width: 250px;
+    height: 60px;
+    border-radius: nullpx;
+    margin: auto;
+    margin-top: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.collectionBlock{
+    display: flex;
+}
+.collectionImg{
+    height: 600px;
+    width: 100%;
+    border-radius: 0px;
+
+}
+.oldCollection{
+    background-color:#000000;
+}
+.oldCollectionText1{
+    font-family: Playfair Display;
+font-size: 36px;
+font-weight: 400;
+line-height: 48px;
+letter-spacing: 0em;
+text-align: center;
+height: 39px;
+width: 376px;
+left: 1212px;
+top: 1888px;
+border-radius: nullpx;
+color:#FFFFFF;
+border-bottom: solid 1px #FFFFFF;
+padding-bottom: 80px;
+margin: auto;
+margin-top: 100px;
+}
+.oldCollectionText2{
+    height: 173px;
+width: 471px;
+left: 1165px;
+top: 2007px;
+border-radius: nullpx;
+font-family: PT Sans;
+font-size: 14px;
+font-weight: 400;
+line-height: 21px;
+letter-spacing: 0em;
+text-align: center;
+color:#FFFFFF;
+margin: auto;
+margin-top: 50px;
 }

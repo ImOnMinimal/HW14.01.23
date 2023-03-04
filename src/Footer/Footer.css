@@ -1,0 +1,15 @@
+.footer{
+    width: 100%;
+    background-color: #0F0F0F;
+    display: flex;
+    height: 75px;
+}
+.footer div{
+    color: #FFFFFF;   
+    margin: auto;
+}
+.width1080{
+    width: 1080px;
+    margin:auto;
+    display:flex;
+}

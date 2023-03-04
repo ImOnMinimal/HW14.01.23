@@ -1,5 +1,7 @@
 import './Body.css'
 import Good from './Good.js'
+import SideMenu from '../SideMenu/SideMenu.js'
+
 
 
 function Body() {
@@ -20,7 +22,7 @@ function Body() {
             </div>
         </div>
         <div className='bodyNews'>
-            <div className='width50 newSeason'>
+            <div className='width1140 newSeason'>
                 <div className='newSeasonText'>
                     СЕЗОН 2020/21
                 </div>
@@ -30,11 +32,31 @@ function Body() {
                     <Good/>
                 </div>
             </div>
-            <div className='newCollection width50'>
+            <div className='newCollection width880'>
                 <div className='newCollectionText'>НОВАЯ КОЛЛЕКЦИЯ</div>
-                <button>КАТАЛОГ</button>
+                <div className='flex1'>
+                    <button className='buttonCollection'>КАТАЛОГ</button>
+                </div>
             </div>
         </div>
+        <div className='collectionBlock'>
+            <div className='width880'>
+                <img src="./img/collectionimg.png" className='collectionImg'></img>
+            </div>
+            <div className='width1140 oldCollection'>
+                <div className='oldCollectionText1'>
+                    КОЛЛЕКЦИЯ 2018
+                </div>
+                <div className='flex1 oldCollectionText2'>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non rutrum ornare ut mattis habitant dui arcu. Sagittis amet nunc ut neque quis nibh arcu. Vivamus vestibulum nisi et venenatis sed scelerisque magna consectetur. Amet convallis quis gravida facilisis vulputate. Faucibus facilisi habitasse ipsum interdum dictum aliquet. Velit quis ullamcorper pulvinar nulla malesuada integer. Aenean praesent viverra nulla nullam natoque volutpat curabitur auctor. Viverra viverra ullamcorper scelerisque risus dignissim egestas. Id aliquam a aliquam egestas leo orci pharetra sed diam. 
+                </div>
+                <div className='flex1'>
+                    <button className='buttonCollection'>ПОСМОТРЕТЬ КОЛЛЕКЦИЮ</button>
+                </div>
+            </div>
+        </div>
+
+        <SideMenu/>
       </>
     );
   }

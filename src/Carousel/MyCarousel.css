@@ -1,0 +1,11 @@
+.CarouselItem{
+    flex-wrap: wrap;
+    display: flex !important;
+}
+.width1080{
+    width: 1080px;
+    margin:auto;
+}
+.bgColorBlack{
+    background-color: #000000;
+}
