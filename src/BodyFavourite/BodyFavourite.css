@@ -1,0 +1,64 @@
+.bodyIntroFavourite{
+    width: 100%;
+    height: 934px;
+    background-image: url('../Body/welcomescreen.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.bodyFlexFavourite{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+}
+.squareBoxFavourite{
+    height: 368.9876403808594px;
+    width: 320px;
+    border-radius: 0px;
+    border: 4px solid #FFFFFF;
+    margin:auto;
+    margin-bottom: 0px;
+    margin-top: 130px;
+}
+
+
+.squareText1Favourite{
+    font-family: Bebas Neue;
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 80px;
+    margin-top: 20px;
+    letter-spacing: 0em;
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: -18px;
+}
+.squareText2Favourite{
+    font-family: PT Sans;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: center;
+    color:#FFFFFF;
+    border-top: solid 1px #FFFFFF;
+    display: block;
+    width: 70%;
+    padding-top: 20px;
+    margin: auto;
+}
+.bottomTextFavourite{
+    font-family: PT Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+    height: 110.69629669189453px;
+    width: 730px;
+    border-radius: nullpx;
+    color:#FFFFFF;
+    margin: auto;
+    margin-top: 0px;
+}

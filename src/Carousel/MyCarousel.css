@@ -9,3 +9,11 @@
 .bgColorBlack{
     background-color: #000000;
 }
+.textValue{
+    padding: 30px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    background-color: #000000;
+    color: #FFFFFFFF;
+}
