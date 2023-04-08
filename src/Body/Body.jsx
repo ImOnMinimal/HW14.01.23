@@ -4,15 +4,15 @@ import React from 'react';
 
 
 
-function Body() {
+function Body(props) {
     let card = [
-        {id: 1, name: "Louis XIV ATHOS", cost: "165 000 руб.", img: "./img/goodimage.png"},
-        {id: 2, name: "Louis XXVI ATHOS", cost: "100 032 руб.", img: "./img/goodimage1.png"},
-        {id: 3, name: "Louis XVII ATHOS", cost: "177 885 руб.", img: "./img/goodimage2.png"}
+        {id: 8, name: "Louis XIV ATHOS", cost: "165 000 руб.", img: "./img/goodimage.png"},
+        {id: 9, name: "Louis XXVI ATHOS", cost: "100 032 руб.", img: "./img/goodimage1.png"},
+        {id: 10, name: "Louis XVII ATHOS", cost: "177 885 руб.", img: "./img/goodimage2.png"}
       ]
     
       let cards = card.map(result => {
-        return <Good name={result.name} cost={result.cost} img={result.img}/>
+        return <Good id={result.id} name={result.name} cost={result.cost} img={result.img} addProdToCart={(newProd) => props.addProdToCart(newProd)} cart={props.cart}/>
       })
     return (
       <>

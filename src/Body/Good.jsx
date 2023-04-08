@@ -20,10 +20,14 @@ function Good({id, name, cost, img, addProdToCart}) {
 
   const [addToCart, setAddToCart] = useState(false)
 
+
   function clickAdd(newProd){
     setAddToCart(!addToCart)
     addProdToCart(newProd)
+    
+    
   }
+  
 
     
     
@@ -42,7 +46,7 @@ function Good({id, name, cost, img, addProdToCart}) {
                   <div className="calculate" onClick={decrement}>-</div>
                   <div className="calculate">{count}</div>
                   <div className="calculate text-end" onClick={increment}>+</div>
-                  <div className='buttonAddToCart'><img src={addToCart ? './img/addtocartlightgreen.png' : './img/addtocartwhite.png'} onClick={() =>  clickAdd({id: id, name: name, cost: cost, img: img})}></img></div>
+                  <div className='buttonAddToCart'><img className='buttonAddToCart' src={addToCart ? './img/addtocartlightgreen.png' : './img/addtocartwhite.png'} onClick={() =>  clickAdd({id: id, name: name, cost: cost, img: img})}></img></div>
                 </div>
             </div>
         </div>

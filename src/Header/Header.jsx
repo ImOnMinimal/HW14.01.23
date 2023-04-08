@@ -7,6 +7,16 @@ import {Link} from 'react-router-dom'
 
 function Header(props) {
   const [openCart, setOpenCart] = useState(false)
+  const [cartEmpty, setCartEmpty] = useState(true)
+  function clickSet(){
+    setOpenCart(true)
+    if(props.cart.length > 0){
+      setCartEmpty(false)
+    }
+    else{
+      setCartEmpty(true)
+    }
+  }
 
     
     return (
@@ -28,16 +38,16 @@ function Header(props) {
             <Link to="/"><span className="logo">PORTEN</span></Link>
             <div width="width75">
               <ul className="navbar">
-                <li className="navElem1">ГЛАВНАЯ</li>
+                <Link to="/"><li className="navElem1">ГЛАВНАЯ</li></Link>
                 <Link to="/purchases"><li className="navElem1">МОИ ПОКУПКИ</li></Link>
                 <Link to="/favourite"><li className="navElem1">ЗАКЛАДКИ</li></Link>
-                <li className="navElem2"><img src='./img/cart.png' className='navImage1' alt='cart'  onClick={() => setOpenCart(true)}></img></li>
+                <li className="navElem2"><img src='./img/cart.png' className='navImage1' alt='cart'  onClick={() => clickSet()}></img></li>
                 <li className="navElem2"><img src='./img/profile.png' className='navImage2' alt='profile'></img></li>
               </ul>
             </div>
           </div>
         </div>
-        <SideMenu openCart={openCart} setOpenCart={setOpenCart} cart={props.cart}></SideMenu>
+        <SideMenu openCart={openCart} setOpenCart={setOpenCart} cart={props.cart} cartEmpty={cartEmpty}></SideMenu>
       </>
     );
   }

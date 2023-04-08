@@ -12,7 +12,7 @@
 .rightSide{
     height: max;
     width: 61px;
-    background: #5e5e5e;
+    background: #0F0F0F;
 }
 .mainSideMenuGood{
     width:296px;
@@ -136,4 +136,81 @@
     padding-top: 30px;
     margin: auto;
     justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.bodyFlexEmptyCart{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.squareBoxEmptyCart{
+    height: 250px;
+    width: 245.4175567626953px;
+    left: 42px;
+    top: 44px;
+    border-radius: 0px;
+    margin:auto;
+    margin-bottom: 0px;
+    margin-top: 130px;
+}
+
+
+.squareText1EmptyCart{
+    border-radius: nullpx;
+    margin-top: 20px;
+    color: #d3d3d3;
+    text-align: center;
+    margin-bottom: -18px;
+    font-family: Bebas Neue;
+    font-size: 79px;
+    font-weight: 400;
+    line-height: 70px;
+    letter-spacing: 0em;
+    text-align: center;
+
+}
+.squareText2EmptyCart{
+    
+    font-family: PT Sans;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: center;
+    color:#FFFFFF;
+    border-top: solid 1px #FFFFFF;
+    display: block;
+    width: 210px;
+    padding-top: 20px;
+    margin: auto;
+    text-align: center;
+}
+.bottomTextEmptyCart{
+    margin-left: 30px;
+    margin-right: 30px;
+    border-radius: nullpx;
+    font-family: PT Sans;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #d3d3d3;
 }

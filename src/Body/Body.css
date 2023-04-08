@@ -99,6 +99,7 @@
 .mainGood{
     width:260px;
     margin: auto;
+    margin-bottom: 10px;
 }
 .goodImgBg{
     height: 380px;
@@ -158,6 +159,10 @@
     height: 21px;
     border-radius: nullpx;
     color:#D0D0D0;
+}
+.buttonAddToCart{
+    width: 25px;
+    height: 25px;
 }
 
 

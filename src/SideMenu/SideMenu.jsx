@@ -5,7 +5,7 @@ import React from 'react';
 
 
 
-function SideMenu({openCart, setOpenCart, cart}) {
+function SideMenu({openCart, setOpenCart, cart, cartEmpty}) {
   // const [openCart, SetOpenCart] = useState(true)
 
   // let styleOverflow = {}
@@ -32,19 +32,20 @@ function SideMenu({openCart, setOpenCart, cart}) {
       setCount(newCount)
     }
     // ----------
-    const [ count1, setCount1 ] = useState(0);
-    function increment() {
-      setCount1(count + 1);
-    }
-    function decrement() {
-      setCount1(count - 1);
-    }
+    // const [ count1, setCount1 ] = useState(0);
+    // function increment() {
+    //   setCount1(count1 + 1);
+    // }
+    // function decrement() {
+    //   setCount1(count1 - 1);
+    // }
 
-    let str = cart
-    str = String(str)
-    str = str.split(" ").join("")
-    let sum = parseFloat(str) * count
-    sum = sum.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")+" руб.";
+    // let str = cart
+    // str = String(str)
+    // str = str.split(" ").join("")
+    // let sum = parseFloat(str) * count1
+    // console.log(str)
+    // sum = sum.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")+" руб.";
     // ----------
     const [show, setShow] = useState(false);
 
@@ -61,8 +62,17 @@ function SideMenu({openCart, setOpenCart, cart}) {
     }
   
 
-    
-
+    let emptyCart = {}
+    let buttonsDisplay = {}
+    if(cartEmpty == false){
+      emptyCart = {display: 'none'}
+      buttonsDisplay = {display: 'block'}
+    }
+    else if(cartEmpty == true){
+      emptyCart = {display: 'block'}
+      buttonsDisplay = {display: 'none'}
+    }
+    console.log(emptyCart)
     
   
     let styleOverflow = {}
@@ -123,28 +133,21 @@ function SideMenu({openCart, setOpenCart, cart}) {
         
               <div className='leftSide'>
                   <div style={sideMenuHide}>
-                    {/* {cards} */}
-                    {
-                    cart.map((item) => {
-                      return <div className='flex1 mainSideMenuGood sideMenuGoodImgBg'>
-                      <div className='flex1 w-50'>
-                          <img src={item.img} className='sideMenuGoodImg' alt='img'></img>
-                      </div>
-                      <div className='flex1 sideMenuGoodTextBlock'>
-                          <div className='sideMenuGoodText1'>{item.name}</div>
-                          <div className='sideMenuGoodText2'>{item.cost}</div>
-                          <div className='sideMenuGoodText2'>{item.cost} * {count1} = <span className='number'>{sum}</span></div>
-                          {/* <img src={addedCart ? './img/profile.png' : './img/cart.png'} onClick={() => SetAddedCart(!addedCart)}/> */}
-                          <div className='d-flex justify-content-between'>
-                            <div className="calculate" onClick={decrement}>-</div>
-                            <div className="calculate">{count1}</div>
-                            <div className="calculate text-end" onClick={increment}>+</div>
-                          </div>
-                      </div>
+                    <div style={emptyCart} className='bodyFlexEmptyCart'>
+                        <div className='w-100'>
+                            <div className="squareBoxEmptyCart">
+                                <div className='squareText1EmptyCart'>NO GOODS</div><br/>
+                                <div className='squareText2EmptyCart'><img src='./img/noFavorites.png'></img></div>
+                            </div>
+                        </div>
+                        <div className='bottomTextEmptyCart'>
+                            You know, that Fumo Plush that you can't help but squeeze? Plush are here! Discover the whimsical shapes, sizes, and designs of these Fumo Plush today at Fumo Plush Shop. They’re perfect for kids but if you are an adult who needs a little stress relief in your life, we won’t judge! And they come in all sorts of colors and patterns to suit any taste! We have so many different kinds of Fumo Plushs.<br/>
+                            Fumo Plushs are the sweetest gifts to give to your loved ones for special occasions like birthdays, holidays, or to show them how much you care! They are also an adorable addition to your plush collection!
+                        </div>
                     </div>
-                    })
-                    }
-                    <div className='text-white'>
+                    {/* {cards} */}
+                    {cart.map((item) => (<SideMenuGood id={item.id} name={item.name} cost={item.cost} img={item.img}/>))}
+                    <div className='text-white' style={buttonsDisplay}>
                       
                       <button className='countBlock' onClick={() => update()}>{count}</button>
                       <button className='countBlock' onClick={() => setShow(true)}>Оформить заказ</button>
