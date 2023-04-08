@@ -12,7 +12,7 @@ function Body(props) {
       ]
     
       let cards = card.map(result => {
-        return <Good id={result.id} name={result.name} cost={result.cost} img={result.img} addProdToCart={(newProd) => props.addProdToCart(newProd)} cart={props.cart}/>
+        return <Good id={result.id} name={result.name} cost={result.cost} img={result.img} addProdToCart={(newProd) => props.addProdToCart(newProd)} addProdToFav={(newProd) => props.addProdToFav(newProd)}/>
       })
     return (
       <>

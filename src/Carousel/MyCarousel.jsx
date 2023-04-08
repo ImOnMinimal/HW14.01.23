@@ -26,15 +26,15 @@ function MyCarousel(props) {
       <Carousel.Item>
         <div className='CarouselItem width1080'>
           {card.map((singleCard) => (
-            <Good id={singleCard.id} name={singleCard.name} cost={singleCard.cost} img={singleCard.img} addProdToCart={(newProd) => props.addProdToCart(newProd)}/>
+            <Good id={singleCard.id} name={singleCard.name} cost={singleCard.cost} img={singleCard.img} addProdToCart={(newProd) => props.addProdToCart(newProd)} addProdToFav={(newProd) => props.addProdToFav(newProd)}/>
           ))}
         
         </div>
       </Carousel.Item>
       <Carousel.Item className='bgColorBlack'>
       <div className='CarouselItem width1080'>
-      {card.map((singleCard) => (
-            <Good id={singleCard.id} name={singleCard.name} cost={singleCard.cost} img={singleCard.img} addProdToCart={(newProd) => props.addProdToCart(newProd)}/>
+          {card.map((singleCard) => (
+            <Good id={singleCard.id} name={singleCard.name} cost={singleCard.cost} img={singleCard.img} addProdToCart={(newProd) => props.addProdToCart(newProd)} addProdToFav={(newProd) => props.addProdToFav(newProd)}/>
           ))}
         </div>
       </Carousel.Item>

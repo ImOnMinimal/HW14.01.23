@@ -72,7 +72,6 @@ function SideMenu({openCart, setOpenCart, cart, cartEmpty}) {
       emptyCart = {display: 'block'}
       buttonsDisplay = {display: 'none'}
     }
-    console.log(emptyCart)
     
   
     let styleOverflow = {}

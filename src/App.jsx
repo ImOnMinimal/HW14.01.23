@@ -12,6 +12,7 @@ import {Routes, Route} from 'react-router-dom'
 
 function App() {
   const [cart, setCart] = useState([])
+  const [cartFav, setCartFav] = useState([])
 
   // function addProdToCart(newProd){
   //   setCart(prev => [...prev, newProd])
@@ -41,15 +42,56 @@ function App() {
           setCart(cart.filter(p => p.id !== newProd.id));
           
       }
-}
+    }
+
+
+
+
+
+  function addProdToFav(newProd) {
+
+    let alreadyAdded = false
+
+    for (let i = 0; i < cartFav.length; i++) {
+        if (cartFav[i]['id'] == newProd.id) {
+            alreadyAdded = true
+        }
+    }
+
+    if (!alreadyAdded) {
+
+        setCartFav(prev => [...prev, newProd])
+
+    }
+      else {
+          setCartFav(cartFav.filter(p => p.id !== newProd.id));
+          
+      }
+  }
+
+
+
+
+
+
+
+  const [cartEmptyFav, setCartFavEmpty] = useState(true)
+  function clickSetEmpty(){
+    if(cartFav.length > 0){
+      setCartFavEmpty(false)
+    }
+    else{
+      setCartFavEmpty(true)
+    }
+  }
     
   return(
   <>
     
     <Routes>
-      <Route path='/' element={<><Header cart={cart}/><Body addProdToCart={(newProd) => addProdToCart(newProd)} cart={cart}/><MyCarousel addProdToCart={(newProd) => addProdToCart(newProd)} cart={cart}/><Footer/></>}/>
-      <Route path='favourite' element={<><Header cart={cart}/><BodyFavourite/><Footer/></>}/>
-      <Route path='purchases' element={<><Header cart={cart}/><BodyPurchases/><Footer/></>}/>
+      <Route path='/' element={<><Header cart={cart} clickSetEmpty={() => clickSetEmpty()}/><Body addProdToCart={(newProd) => addProdToCart(newProd)} addProdToFav={(newProd) => addProdToFav(newProd)}/><MyCarousel addProdToCart={(newProd) => addProdToCart(newProd)} addProdToFav={(newProd) => addProdToFav(newProd)}/><Footer/></>}/>
+      <Route path='favourite' element={<><Header cart={cart} clickSetEmpty={() => clickSetEmpty()}/><BodyFavourite cartFav={cartFav} cartEmptyFav={cartEmptyFav}/><Footer/></>}/>
+      <Route path='purchases' element={<><Header cart={cart} clickSetEmpty={() => clickSetEmpty()}/><BodyPurchases/><Footer/></>}/> 
     </Routes>
     
     

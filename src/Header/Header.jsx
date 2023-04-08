@@ -17,6 +17,7 @@ function Header(props) {
       setCartEmpty(true)
     }
   }
+  
 
     
     return (
@@ -40,8 +41,8 @@ function Header(props) {
               <ul className="navbar">
                 <Link to="/"><li className="navElem1">ГЛАВНАЯ</li></Link>
                 <Link to="/purchases"><li className="navElem1">МОИ ПОКУПКИ</li></Link>
-                <Link to="/favourite"><li className="navElem1">ЗАКЛАДКИ</li></Link>
-                <li className="navElem2"><img src='./img/cart.png' className='navImage1' alt='cart'  onClick={() => clickSet()}></img></li>
+                <Link to="/favourite"><li className="navElem1" onClick={() => props.clickSetEmpty()}>ЗАКЛАДКИ</li></Link>
+                <li className="navElem2"><img src='./img/cart.png' className='navImage1' alt='cart' onClick={() => clickSet()}></img></li>
                 <li className="navElem2"><img src='./img/profile.png' className='navImage2' alt='profile'></img></li>
               </ul>
             </div>
